@@ -15,8 +15,7 @@ class square:
             else:
                 raise ValueError("Invalid number of positional arguments")
         elif kwargs:
-            self.width = kwargs.get("width", self.width)
-            self.height = kwargs.get("height", self.height)
+            setattr(self, key, value)
 
     def area_of_my_square(self):
         """Area of the square"""
